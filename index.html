@@ -9,6 +9,10 @@
 <style id="eureka-style">
 .eureka-fab { position: fixed; bottom: 28px; right: 20px; width: 56px; height: 56px; border-radius: 50%; background: #1a1a1a; border: none; font-size: 24px; cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.18); z-index: 100; display: flex; align-items: center; justify-content: center; transition: transform 0.15s; }
 .eureka-fab:active { transform: scale(0.92); }
+
+/* 간단한 시계 */
+.simple-clock-wrap { margin-bottom: 1.5rem; }
+.simple-clock { background: #fff; border: 1.5px solid #e8e8e8; border-radius: 16px; padding: 20px; text-align: center; }
 .eureka-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.35); z-index: 200; align-items: flex-end; justify-content: center; }
 .eureka-overlay.open { display: flex; }
 .eureka-sheet { background: #fff; border-radius: 24px 24px 0 0; padding: 20px 20px 36px; width: 100%; max-width: 480px; }
@@ -232,7 +236,15 @@ h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; }
   <div class="progress-label" id="progressLabel"></div>
   <div class="progress-bar-wrap"><div class="progress-bar" id="progressBar" style="width:0%"></div></div>
 
-  <button class="eureka-fab" onclick="openEureka()" aria-label="아이디어 메모">💡</button>
+<!-- 간단한 시계 -->
+<div class="simple-clock-wrap">
+  <div class="simple-clock">
+    <div id="clock-time" style="font-size:48px;font-weight:300;color:#1a1a1a;letter-spacing:2px;margin-bottom:8px;font-variant-numeric:tabular-nums;">00:00:00</div>
+    <div id="clock-date" style="font-size:14px;color:#888;"></div>
+  </div>
+</div>
+
+<button class="eureka-fab" onclick="openEureka()" aria-label="아이디어 메모">💡</button>
 
   <div class="eureka-overlay" id="eurekaOverlay" onclick="closeEurekaIfBg(event)">
     <div class="eureka-sheet">
