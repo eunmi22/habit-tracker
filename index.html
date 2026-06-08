@@ -9,10 +9,6 @@
 <style id="eureka-style">
 .eureka-fab { position: fixed; bottom: 28px; right: 20px; width: 56px; height: 56px; border-radius: 50%; background: #1a1a1a; border: none; font-size: 24px; cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.18); z-index: 100; display: flex; align-items: center; justify-content: center; transition: transform 0.15s; }
 .eureka-fab:active { transform: scale(0.92); }
-
-/* 간단한 시계 */
-.simple-clock-wrap { margin-bottom: 1.5rem; }
-.simple-clock { background: #fff; border: 1.5px solid #e8e8e8; border-radius: 16px; padding: 20px; text-align: center; }
 .eureka-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.35); z-index: 200; align-items: flex-end; justify-content: center; }
 .eureka-overlay.open { display: flex; }
 .eureka-sheet { background: #fff; border-radius: 24px 24px 0 0; padding: 20px 20px 36px; width: 100%; max-width: 480px; }
@@ -157,76 +153,6 @@ h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; }
 .legend { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
 .legend-item { display: flex; align-items: center; gap: 4px; font-size: 11px; color: #888; }
 .legend-dot { width: 7px; height: 7px; border-radius: 50%; }
-
-/* 시계 섹션 */
-.clock-section { background: #1a1a1a; border-radius: 20px; margin-bottom: 1.5rem; overflow: hidden; }
-.clock-tabs { display: flex; border-bottom: 1px solid #2e2e2e; }
-.clock-tab { flex: 1; padding: 12px 4px; background: none; border: none; color: #888; font-size: 12px; font-family: inherit; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 4px; transition: color 0.15s; }
-.clock-tab.active { color: #fff; border-bottom: 2px solid #378ADD; margin-bottom: -1px; }
-.clock-tab span { font-size: 16px; }
-.clock-panel { display: none; padding: 24px 20px 20px; }
-.clock-panel.active { display: block; }
-
-/* 시계 */
-.clock-time { text-align: center; font-size: 52px; font-weight: 300; color: #fff; letter-spacing: -1px; font-variant-numeric: tabular-nums; }
-.clock-time .sec { color: #378ADD; font-size: 36px; vertical-align: baseline; }
-.clock-date { text-align: center; color: #888; font-size: 14px; margin-top: 6px; }
-.clock-tz { text-align: center; color: #666; font-size: 12px; margin-bottom: 10px; }
-
-/* 타이머(시계탭용) */
-.ck-timer-display { text-align: center; font-size: 56px; font-weight: 300; color: #fff; letter-spacing: 2px; font-variant-numeric: tabular-nums; margin: 8px 0 20px; }
-.ck-timer-display.running { color: #1D9E75; }
-.ck-timer-display.done-t  { color: #378ADD; }
-.ck-presets { display: flex; gap: 8px; justify-content: center; margin-bottom: 16px; flex-wrap: wrap; }
-.ck-preset { background: #2e2e2e; border: none; border-radius: 99px; padding: 6px 14px; color: #ccc; font-size: 13px; cursor: pointer; font-family: inherit; }
-.ck-preset:active { background: #3e3e3e; }
-.ck-btns { display: flex; gap: 10px; justify-content: center; }
-.ck-btn { border: none; border-radius: 50%; width: 64px; height: 64px; font-size: 14px; font-weight: 500; cursor: pointer; font-family: inherit; transition: transform 0.1s; }
-.ck-btn:active { transform: scale(0.94); }
-.ck-btn.start  { background: #1D9E75; color: #fff; }
-.ck-btn.pause  { background: #EF9F27; color: #fff; }
-.ck-btn.reset  { background: #2e2e2e; color: #aaa; }
-.ck-btn.stop   { background: #E24B4A; color: #fff; }
-
-/* 알람 */
-.alarm-time-display { text-align: center; font-size: 48px; font-weight: 300; color: #fff; margin: 8px 0 16px; font-variant-numeric: tabular-nums; }
-.alarm-set-row { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 16px; }
-.alarm-input { background: #2e2e2e; border: 1px solid #444; border-radius: 10px; color: #fff; font-size: 15px; padding: 8px 12px; width: 110px; outline: none; font-family: inherit; text-align: center; }
-.alarm-add-btn { background: #378ADD; border: none; border-radius: 10px; color: #fff; font-size: 13px; font-weight: 500; padding: 9px 16px; cursor: pointer; font-family: inherit; }
-.alarm-list { display: flex; flex-direction: column; gap: 8px; }
-.alarm-item { background: #2e2e2e; border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 10px; }
-.alarm-item-time { font-size: 20px; font-weight: 400; color: #fff; flex: 1; font-variant-numeric: tabular-nums; }
-.alarm-item-label { font-size: 12px; color: #888; }
-.alarm-del { background: none; border: none; color: #555; font-size: 16px; cursor: pointer; }
-.alarm-del:active { color: #E24B4A; }
-.alarm-empty { text-align: center; color: #555; font-size: 13px; padding: 16px 0; }
-.alarm-ring { color: #EF9F27 !important; }
-
-/* 스톱워치 */
-.sw-display { text-align: center; font-size: 52px; font-weight: 300; color: #fff; letter-spacing: 2px; font-variant-numeric: tabular-nums; margin: 8px 0 20px; }
-.sw-display .sw-ms { font-size: 32px; color: #378ADD; }
-.sw-laps { max-height: 140px; overflow-y: auto; margin-bottom: 12px; }
-.sw-lap { display: flex; justify-content: space-between; font-size: 13px; color: #888; padding: 5px 0; border-bottom: 1px solid #2e2e2e; font-variant-numeric: tabular-nums; }
-.sw-lap.best { color: #1D9E75; }
-.sw-lap.worst { color: #E24B4A; }
-
-/* 학사일정 아코디언 */
-.accordion-wrap { margin-bottom: 1.5rem; }
-.accordion-btn { width: 100%; background: #fff; border: 1.5px solid #e8e8e8; border-radius: 16px; padding: 14px 16px; display: flex; align-items: center; gap: 10px; cursor: pointer; font-family: inherit; font-size: 14px; font-weight: 500; color: #333; text-align: left; transition: all 0.15s; }
-.accordion-btn:active { transform: scale(0.98); }
-.accordion-btn.open { border-radius: 16px 16px 0 0; border-bottom-color: #f0f0f0; background: #f7f7f5; }
-.accordion-arrow { margin-left: auto; font-size: 13px; color: #aaa; transition: transform 0.2s; }
-.accordion-btn.open .accordion-arrow { transform: rotate(180deg); }
-.accordion-body { display: none; background: #fff; border: 1.5px solid #e8e8e8; border-top: none; border-radius: 0 0 16px 16px; overflow: hidden; }
-.accordion-body.open { display: block; }
-.schedule-table { width: 100%; border-collapse: collapse; font-size: 12px; }
-.schedule-table th { background: #f7f7f5; color: #888; font-weight: 500; padding: 8px 12px; text-align: left; border-bottom: 1px solid #f0f0f0; }
-.schedule-table td { padding: 9px 12px; border-bottom: 1px solid #f7f7f5; color: #333; vertical-align: top; line-height: 1.5; }
-.schedule-table tr:last-child td { border-bottom: none; }
-.schedule-table tr.today-row td { background: #EBF4FF; color: #185FA5; font-weight: 500; }
-.schedule-table tr.soon-row td { background: #FFF8E6; color: #854F0B; }
-.schedule-sem-title { font-size: 13px; font-weight: 600; color: #333; padding: 10px 12px 6px; border-bottom: 1px solid #f0f0f0; }
-.date-col { white-space: nowrap; color: #888; font-size: 11px; min-width: 110px; }
 </style>
 </head>
 <body>
@@ -236,15 +162,7 @@ h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; }
   <div class="progress-label" id="progressLabel"></div>
   <div class="progress-bar-wrap"><div class="progress-bar" id="progressBar" style="width:0%"></div></div>
 
-<!-- 간단한 시계 -->
-<div class="simple-clock-wrap">
-  <div class="simple-clock">
-    <div id="clock-time" style="font-size:48px;font-weight:300;color:#1a1a1a;letter-spacing:2px;margin-bottom:8px;font-variant-numeric:tabular-nums;">00:00:00</div>
-    <div id="clock-date" style="font-size:14px;color:#888;"></div>
-  </div>
-</div>
-
-<button class="eureka-fab" onclick="openEureka()" aria-label="아이디어 메모">💡</button>
+  <button class="eureka-fab" onclick="openEureka()" aria-label="아이디어 메모">💡</button>
 
   <div class="eureka-overlay" id="eurekaOverlay" onclick="closeEurekaIfBg(event)">
     <div class="eureka-sheet">
@@ -255,75 +173,6 @@ h1 { font-size: 22px; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; }
       </div>
       <textarea class="eureka-input" id="eurekaInput" rows="4" placeholder="지금 떠오른 아이디어를 적어보세요..."></textarea>
       <button class="eureka-save-btn" onclick="saveEureka()">저장하기</button>
-    </div>
-  </div>
-
-  <!-- 시계 섹션 -->
-  <div class="clock-section">
-    <div class="clock-tabs">
-      <button class="clock-tab active" onclick="switchTab('clock')"><span>🕐</span>시계</button>
-      <button class="clock-tab" onclick="switchTab('timer')"><span>⏱</span>타이머</button>
-      <button class="clock-tab" onclick="switchTab('alarm')"><span>🔔</span>알람</button>
-      <button class="clock-tab" onclick="switchTab('stopwatch')"><span>⏲</span>스톱워치</button>
-    </div>
-
-    <!-- 시계 패널 -->
-    <div class="clock-panel active" id="panel-clock">
-      <div class="clock-tz">서울 · KST</div>
-      <div class="clock-time"><span id="ck-h">00</span>:<span id="ck-m">00</span>:<span class="sec" id="ck-s">00</span></div>
-      <div class="clock-date" id="ck-date"></div>
-    </div>
-
-    <!-- 타이머 패널 -->
-    <div class="clock-panel" id="panel-timer">
-      <div class="ck-timer-display" id="ck-timer-disp">00:00</div>
-      <div class="ck-presets">
-        <button class="ck-preset" onclick="ckTimerPreset(5)">5분</button>
-        <button class="ck-preset" onclick="ckTimerPreset(10)">10분</button>
-        <button class="ck-preset" onclick="ckTimerPreset(15)">15분</button>
-        <button class="ck-preset" onclick="ckTimerPreset(20)">20분</button>
-        <button class="ck-preset" onclick="ckTimerPreset(30)">30분</button>
-      </div>
-      <div class="ck-btns">
-        <button class="ck-btn reset" onclick="ckTimerReset()">초기화</button>
-        <button class="ck-btn start" id="ck-timer-btn" onclick="ckTimerToggle()">시작</button>
-      </div>
-    </div>
-
-    <!-- 알람 패널 -->
-    <div class="clock-panel" id="panel-alarm">
-      <div class="alarm-time-display" id="alarm-now">00:00</div>
-      <div class="alarm-set-row">
-        <input class="alarm-input" type="time" id="alarm-input" value="07:00">
-        <button class="alarm-add-btn" onclick="addAlarm()">+ 추가</button>
-      </div>
-      <div class="alarm-list" id="alarm-list"></div>
-    </div>
-
-    <!-- 스톱워치 패널 -->
-    <div class="clock-panel" id="panel-stopwatch">
-      <div class="sw-display"><span id="sw-disp">00:00</span><span class="sw-ms">.<span id="sw-ms">00</span></span></div>
-      <div class="sw-laps" id="sw-laps"></div>
-      <div class="ck-btns">
-        <button class="ck-btn reset" onclick="swLap()" id="sw-lap-btn" style="font-size:12px">랩</button>
-        <button class="ck-btn start" id="sw-btn" onclick="swToggle()">시작</button>
-        <button class="ck-btn reset" onclick="swReset()">초기화</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="section-label">🎓 대학원 학사일정</div>
-  <div class="accordion-wrap">
-    <button class="accordion-btn" id="scheduleBtn" onclick="toggleSchedule()">
-      <span>📅</span> 2026학년도 가을학기 일정
-      <span class="accordion-arrow">▼</span>
-    </button>
-    <div class="accordion-body" id="scheduleBody">
-      <div class="schedule-sem-title">2026학년도 가을학기</div>
-      <table class="schedule-table">
-        <thead><tr><th class="date-col">일자</th><th>학사내용</th></tr></thead>
-        <tbody id="scheduleTbody"></tbody>
-      </table>
     </div>
   </div>
 
@@ -381,60 +230,6 @@ function loadCourse(id){ try{const r=localStorage.getItem(courseKey(id));return 
 function saveCourse(id,v){ try{localStorage.setItem(courseKey(id),JSON.stringify(v));}catch{} }
 
 let timerState = { remaining: 30*60, running: false, interval: null };
-
-const SCHEDULE = [
-  { s:'2026-07-27', e:'2026-08-02', text:'재입학 신청' },
-  { s:'2026-07-30', e:'2026-08-06', text:'2026학년도 가을학기 재학생 등록금 납부' },
-  { s:'2026-08-03', e:'2026-08-21', text:'2026학년도 가을학기 외국어시험 대체강좌 신청' },
-  { s:'2026-08-03', e:'2026-08-21', text:'2026학년도 가을학기 외국어시험 면제 신청' },
-  { s:'2026-08-22', e:'2026-08-22', text:'2025후기 학위기준일' },
-  { s:'2026-08-31', e:'2026-08-31', text:'2026학년도 가을학기 개강' },
-  { s:'2026-08-27', e:'2026-09-02', text:'2026학년도 가을학기 추가수강신청' },
-  { s:'2026-08-27', e:'2026-09-02', text:'2026학년도 가을학기 선수과목 인정신청(추가)' },
-  { s:'2026-09-03', e:'2026-09-09', text:'2026학년도 가을학기 외국어시험 신청' },
-  { s:'2026-09-03', e:'2026-09-10', text:'2026학년도 가을학기 재학생 미등록자 추가납부' },
-  { s:'2026-09-10', e:'2026-09-16', text:'2026학년도 가을학기 외국어시험 응시료 납부' },
-  { s:'2026-09-19', e:'2026-09-19', text:'2026학년도 가을학기 외국어시험' },
-  { s:'2026-09-29', e:'2026-09-29', text:'등록금 반환 기준 5/6선' },
-  { s:'2026-10-12', e:'2026-10-18', text:'2026학년도 가을학기 중간고사' },
-  { s:'2026-10-20', e:'2026-10-26', text:'2026학년도 가을학기 종합시험 신청' },
-  { s:'2026-10-27', e:'2026-11-21', text:'2026학년도 가을학기 종합시험 강의열람' },
-  { s:'2026-10-29', e:'2026-10-29', text:'등록금 반환 기준 2/3선' },
-  { s:'2026-11-20', e:'2026-11-21', text:'2026학년도 가을학기 종합시험' },
-  { s:'2026-11-28', e:'2026-11-28', text:'등록금 반환 기준 1/2선' },
-  { s:'2026-12-07', e:'2026-12-13', text:'2026학년도 가을학기 기말고사' },
-  { s:'2026-12-13', e:'2026-12-13', text:'2026학년도 가을학기 종강일' },
-  { s:'2026-12-25', e:'2026-12-28', text:'2026학년도 가을학기 성적열람 및 이의신청' },
-];
-
-function toggleSchedule() {
-  const btn = document.getElementById('scheduleBtn');
-  const body = document.getElementById('scheduleBody');
-  btn.classList.toggle('open');
-  body.classList.toggle('open');
-}
-
-function formatDateRange(s, e) {
-  const fmt = d => { const x=new Date(d); return `${x.getMonth()+1}/${x.getDate()}`; };
-  return s===e ? fmt(s) : `${fmt(s)} ~ ${fmt(e)}`;
-}
-
-function renderSchedule() {
-  const now = today.getTime();
-  const soon = today.getTime() + 7*86400000;
-  const tbody = document.getElementById('scheduleTbody');
-  tbody.innerHTML = SCHEDULE.map(row => {
-    const sd = new Date(row.s).getTime(), ed = new Date(row.e).getTime() + 86400000;
-    const isCurrent = now >= sd && now < ed;
-    const isSoon = !isCurrent && sd > now && sd <= soon;
-    const cls = isCurrent ? 'today-row' : isSoon ? 'soon-row' : '';
-    const badge = isCurrent ? ' 🔵' : isSoon ? ' 🟡' : '';
-    return `<tr class="${cls}">
-      <td class="date-col">${formatDateRange(row.s, row.e)}</td>
-      <td>${row.text}${badge}</td>
-    </tr>`;
-  }).join('');
-}
 
 function eurekaStoreKey() { return 'eureka5_ideas'; }
 function loadIdeas() { try { const r=localStorage.getItem(eurekaStoreKey()); return r?JSON.parse(r):[]; } catch { return []; } }
@@ -515,9 +310,7 @@ function getStreak(id) {
   return s;
 }
 function toggleHabit(id){ const d=loadDay(today);d[id]=!d[id];saveDay(today,d);render();
-renderEureka();
-renderSchedule();
-window.renderAlarms(); }
+renderEureka(); }
 function changeMonth(delta){ viewDate=new Date(viewDate.getFullYear(),viewDate.getMonth()+delta,1);render(); }
 
 function updateCourseLec(id,val){
@@ -591,12 +384,11 @@ function render(){
     const done=!!todayData[h.id], streak=getStreak(h.id);
     const badge=h.badge?`<span class="time-badge badge-${h.badge}">${h.badgeText}</span>`:'';
     const memoVal=h.memo?loadMemo(h.id):'';
-    const timerMin = h.timerMin || 30;
     const timerHtml = h.timer ? `<div class="timer-wrap" onclick="event.stopPropagation()">
-        <div id="timer-display-${h.id}" class="timer-display paused">${String(timerMin).padStart(2,'0')}:00</div>
+        <div id="timer-display" class="timer-display paused">30:00</div>
         <div class="timer-btns">
-          <button id="timer-toggle-btn-${h.id}" class="timer-btn" onclick="timerToggle(event,'${h.id}',${timerMin})">시작</button>
-          <button class="timer-btn reset" onclick="timerReset(event,'${h.id}',${timerMin})">초기화</button>
+          <button id="timer-toggle-btn" class="timer-btn" onclick="timerToggle(event)">시작</button>
+          <button class="timer-btn reset" onclick="timerReset(event)">초기화</button>
         </div>
       </div>` : '';
     const memoHtml=`<div class="memo-area" onclick="event.stopPropagation()">
